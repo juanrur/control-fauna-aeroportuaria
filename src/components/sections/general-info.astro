@@ -1,0 +1,52 @@
+---
+const startYear = 1999;
+const experienceYears = new Date().getFullYear() - startYear;
+---
+
+<section class="p-10 px-20">
+  <article class="space-y-3 flex justify-center items-center max-lg:flex-col">
+    <h1 class="text-9xl font-bold m-0">{experienceYears}</h1>
+    <p
+      class="text-xl max-lg:text-center text-balance lg:self-end lg:mb-2 lg:w-96 lg:text-2xl"
+    >
+      <span class="lg:lowercase">Años</span> de experiencia en el control de fauna
+      del <span class="font-semibold">aeropuerto de Sevilla</span>
+    </p>
+    <img
+      class="w-40 max-lg:mt-5 lg:w-80 lg:ml-20"
+      src="https://controlfaunaaeroportuaria.es/wp-content/uploads/2024/03/Group-34-1-480x236.png"
+      alt="Socios de aena"
+    />
+  </article>
+  <article class="mt-10">
+    <div class="space-y-4">
+      <img
+      class="rounded"
+      src="https://controlfaunaaeroportuaria.es/wp-content/uploads/2024/06/IMG-54.webp"
+      alt=""
+      />
+      <h1 class="text-4xl text-center">Control de fauna</h1>
+    </div>
+    <ul class="grid grid-cols-2 gap-5 max-lg:mt-10">
+      <li><img src="" alt=""><span>Fauna Aeronáutica</span></li>
+      <li><img src="" alt=""><span>Instalaciones energéticas</span></li>
+      <li><img src="" alt=""><span>Urbanizaciones</span></li>
+      <li><img src="" alt=""><span>Instalaciones agrícolas y cultivos</span></li>
+      <li><img src="" alt=""><span>Comunidades</span></li>
+      <li><img src="" alt=""><span>Edificios e Instalaciones públicas</span></li>
+    </ul>
+  </article>
+</section>
+
+  
+<style>
+	@import "tailwindcss";
+	
+	li {
+		@apply rounded bg-blue-400 h-40 relative
+	}
+
+	li > span {
+		@apply bg-[rgba(255,255,255,.4)] block absolute w-full bottom-8 p-2 px-0 text-center text-white
+	}
+</style>
