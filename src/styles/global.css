@@ -4,3 +4,9 @@
   --color-primary: #015a80;
   --color-secondary: #21a89f ;
 }
+
+@layer base {
+  h1 {
+    @apply text-6xl font-bold mb-5;
+  }
+}

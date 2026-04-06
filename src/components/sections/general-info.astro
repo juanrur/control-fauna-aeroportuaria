@@ -3,7 +3,7 @@ const startYear = 1999;
 const experienceYears = new Date().getFullYear() - startYear;
 ---
 
-<section class="p-10 px-20">
+<section class="py-10 max-w-350 m-auto p-3">
   <article class="space-y-3 flex justify-center items-center max-lg:flex-col">
     <h1 class="text-9xl font-bold m-0">{experienceYears}</h1>
     <p
@@ -18,10 +18,10 @@ const experienceYears = new Date().getFullYear() - startYear;
       alt="Socios de aena"
     />
   </article>
-  <article class="mt-10">
-    <div class="space-y-4">
+  <article class="mt-10 grid grid-cols-2 max-lg:grid-cols-1 gap-10">
+    <div class="space-y-4 flex flex-col items-center">
       <img
-      class="rounded"
+      class="rounded-2xl"
       src="https://controlfaunaaeroportuaria.es/wp-content/uploads/2024/06/IMG-54.webp"
       alt=""
       />
@@ -43,7 +43,7 @@ const experienceYears = new Date().getFullYear() - startYear;
 	@import "tailwindcss";
 	
 	li {
-		@apply rounded bg-blue-400 h-40 relative
+		@apply rounded-lg bg-blue-400 h-40 relative
 	}
 
 	li > span {
