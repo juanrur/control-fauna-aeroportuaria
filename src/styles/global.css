@@ -3,7 +3,8 @@
 
 @theme {
   --color-primary: #015a80;
-  --color-secondary: #21a89f ;
+  --color-secondary: #21a89f;
+  --background-image-fade-edge: linear-gradient(to bottom, transparent 0%, #cad5e2 5%, #cad5e2 95%, transparent 100%);
 }
 
 @layer base {

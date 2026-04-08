@@ -13,7 +13,7 @@ import '../styles/global.css'
 		<title>Control de fauna aeroportuaria</title>
 	</head>
 	<body>
-		<header class="h-24 w-full fixed px-5 bg-white z-50 flex justify-center items-center shadow-xl">
+		<header class="h-24 w-full fixed px-5 bg-white z-50 flex justify-center items-center animate-[shadowFadeOut_1s_ease-out] animate-timeline-scroll">
 			<nav class="uppercase text-nowrap text-primary text-lg font-semibold flex justify-center items-center gap-8 h-full mx-5">
 				<a href="/">inicio</a>
 				<a href="la-empresa">la empresa</a>
@@ -27,6 +27,9 @@ import '../styles/global.css'
 		<main class="h-full pt-24">
 			<slot />
 		</main>
+		<footer class="bg-primary h-10">
+			
+		</footer>
 	</body>
 </html>
 
@@ -35,7 +38,7 @@ import '../styles/global.css'
 	body {
 		margin: 0;
 		width: 100%;
-		height: 100vh;
+		min-height: 100vh;
 		position: relative;
 	}
 
@@ -52,5 +55,21 @@ import '../styles/global.css'
 		mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 70%, transparent 100%);
 		pointer-events: none;
 		z-index: -1;
+	}
+
+	@keyframes shadowFadeOut {
+		0% {
+			box-shadow: none;
+		}
+		100% {
+			box-shadow: 0 1px 50px rgba(0, 0, 0, 0.5);
+		}
+	}
+
+	header {
+		box-shadow: 0 1px 50px rgba(0, 0, 0, 0.5);
+		animate: shadowFadeOut ease-out forwards;
+		animation-timeline: scroll();
+		animation-range: 0 100vh;
 	}
 </style>
