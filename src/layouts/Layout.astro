@@ -13,11 +13,34 @@ import '../styles/global.css'
 		<title>Control de fauna aeroportuaria</title>
 	</head>
 	<body>
-		<header class="h-24 w-full fixed px-5 bg-white z-50 flex justify-center items-center animate-[shadowFadeOut_1s_ease-out] animate-timeline-scroll">
+		<header class="h-24 w-full fixed px-5 bg-white z-50 flex justify-center items-center animate-[shadowFadeOut_1s_ease-out]">
 			<nav class="uppercase text-nowrap text-primary text-lg font-semibold flex justify-center items-center gap-8 h-full mx-5">
 				<a href="/">inicio</a>
 				<a href="la-empresa">la empresa</a>
-				<a href="">control de fauna</a>
+				<div class="group relative">
+					<a href="control-fauna">control de fauna
+						<ul class="h-0 group-hover:h-52 *:border-b text-[16px] *:hover:scale-105 *:transition-transform overflow-hidden absolute transition-all duration-300 backdrop-blur-2xl top-full group-hover:p-4 group-hover:pt-2 space-y-2 box-border">
+							<li>
+								<a href="#fauna-aeronautica">Fauna aeronáutica</a>
+							</li>
+							<li>
+								<a href="#instalaciones-energeticas">Instalaciones energéticas</a>
+							</li>
+							<li>
+								<a href="#instalaciones-agricolas-y-cultivos">Instalaciones agrícolas y cultivos</a>
+							</li>
+							<li>
+								<a href="#urbanizaciones">Urbanizaciones</a>
+							</li>
+							<li>
+								<a href="#comunidades">Comunidades</a>
+							</li>
+							<li>
+								<a href="#">Edificios e Instalaciones públicas</a>
+							</li>
+						</ul>
+					</a>
+				</div>
 				<a href="">actividades y formación</a>
 				<a href="">blog y galería</a>
 				<a href="">contacto</a>
@@ -40,6 +63,8 @@ import '../styles/global.css'
 		width: 100%;
 		min-height: 100vh;
 		position: relative;
+		scroll-behavior: smooth;
+		scroll-padding-top: 120px;
 	}
 
 	body::before {

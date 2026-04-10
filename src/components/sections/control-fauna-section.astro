@@ -1,0 +1,45 @@
+---
+interface Props {
+  title: string
+  subtitle: string
+  paragraphs: string[]
+  images: string[]
+  rightImage?: boolean
+  id: string
+}
+
+const { title, subtitle, paragraphs, images, rightImage, id }: Props = Astro.props
+---
+
+<section id={id} class="space-y-10 [&_img]:rounded-lg [&_img]:w-full [&_img]:h-auto [&_img]:object-cover [&_p]:prose [&_p]:leading-5 [&_p]:text-center *:grid *:gap-10">
+  <article class="[&_p]:text-xl [&_p]:leading-7">
+    <div>
+      <h1 class="text-6xl text-balance text-center text-primary">{title}</h1>
+      <h2 class="text-xl text-balance text-primary/95 text-center">{subtitle}</h2>
+      <p class="mt-6 mx-auto">{paragraphs[0]}</p>
+    </div>
+    <img src={images[0]} alt="Control fauna aeroportuaria" class="size-full object-cover">
+  </article>
+  <article class="[&_p]:text-xl [&_p]:leading-7 flex h-full items-center grid-cols-[1.7fr_2fr]">
+    {
+      rightImage &&
+      <img src={images[1]} alt="">
+    }
+    <p>{paragraphs[1]}</p>
+    {
+      !rightImage &&
+      <img src={images[1]} alt="">
+    }
+  </article>
+  <article class="[&_p]:text-xl [&_p]:leading-7 flex h-full items-center grid-cols-[1.7fr_2fr]">
+    {
+      rightImage &&
+      <img src={images[2]} alt="">
+    }
+    <p>{paragraphs[2]}</p>
+    {
+      !rightImage &&
+      <img src={images[2]} alt="">
+    }
+  </article>
+</section>
